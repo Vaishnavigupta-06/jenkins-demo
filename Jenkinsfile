@@ -3,13 +3,13 @@ pipeline{
   stages{
   stage("clone")
     {
-      step{
+      steps{
       git  credentialsId: 'demo-id', url: 'https://github.com/Vaishnavigupta-06/jenkins-demo.git'
       }
     }
     stage("run")
     {
-      step{
+      steps{
       sh 'python3 file1.py'
       }
     }
