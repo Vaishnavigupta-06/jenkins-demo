@@ -1,9 +1,19 @@
-node{
+pipeline{
+  agent any
+  stages{
   stage("clone")
-  {
-    git  credentialsId: 'demo-id', url: 'https://github.com/Vaishnavigupta-06/jenkins-demo.git'
+    {
+      step{
+      git  credentialsId: 'demo-id', url: 'https://github.com/Vaishnavigupta-06/jenkins-demo.git'
+      }
+    }
+    stage("run")
+    {
+      step{
+      sh 'python3 file1.py'
+      }
+    }
+  
+  
   }
-  stage("run")
-  {
-    sh 'python3 file1.py'
-  }}
+}
