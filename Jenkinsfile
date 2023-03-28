@@ -1,6 +1,6 @@
 node{
   stage("run")
   {
-    sh 'python '
+    sh 'python file1.py'
   }
 }
