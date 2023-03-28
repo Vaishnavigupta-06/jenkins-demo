@@ -4,7 +4,7 @@ pipeline{
   stage("clone")
     {
       steps{
-      git branch: 'main',credentialsId: 'demo-id', url: 'https://github.com/Vaishnavigupta-06/jenkins-demo.git'
+      git branch: 'dev',credentialsId: 'demo-id', url: 'https://github.com/Vaishnavigupta-06/jenkins-demo.git'
       }
     }
     stage("run")
